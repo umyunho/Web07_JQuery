@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_Efffect</title>
+    <style type="text/css">
+        span{font-size: 180%; font-weight: bold; display: none;}
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javaScript">
+    $(function(){
+        $('button:eq(0)').click(function(){
+            //show it : span 태그를 배경색 노란색으로 바꾸고 화면에 표시
+            //$('span:first').css("background", "yellow");
+            $('span:first').show(1000,function(){
+                $(this).css("background","yellow");
+            });
+
+        });
+
+        $('button:eq(1)').click(function(){
+            $('span:first').toggle( 1000,function(){
+                $(this).css("background", "yellow");
+            });
+        });
+    });
+
+</script>
+</head>
+<body>
+    <button>Show It</button>
+    <button>Hide It</button>
+    <span>안녕하세요.</span>
+    <br>
+    <button>Show It SLow</button>
+    <button>Hide It SLow</button>
+    <span>반갑습니다.</span>
+
+</body>
+</html>
