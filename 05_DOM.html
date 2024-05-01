@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">;
+    <title>05_DOM</title>
+    <style type="text/css">
+        .item_1{background: red; color: white;}
+        .item_2{background: pink; color: white;}
+        .item_3{background: orange; color: white;}
+
+        .width_1{width: 100px;}
+        .width_2{width: 200px;}
+        .width_3{width: 300px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javaScript">
+        //h1태그에 item_1, item_2, item_3클래스 추가
+        $(function(){
+            /* $('h1').eq(0).addClass('item_1');
+            $('h1').eq(1).addClass('item_2');
+            $('h1').eq(2).addClass('item_3'); */
+
+            /* $('h1').each(function(index){
+                $(this).addClass( 'item_' + (index+1) );
+            }); */
+
+            /* $("h1").addClass(
+                function(index){
+                    return "item_"+(index+1);   //addcalsss에 익명함수가 클래스 이름을 조합해서 리턴
+                }
+            ); */
+
+            
+        });
+        
+        //문서 객체의 속성 검사/추출/추가
+        /* $(function(){
+            //attr 함수를 이용한 태그 내부의 속성값 추출
+            var src = $('img:eq(1)').attr('src');
+            var header1 = document.createElement('h2');
+            var textNode = document.createTextNode(src);
+            header1.appendChild( textNode );
+            document.body.appendChild(header1);
+
+            var w = $('img:eq(1)').attr('width');
+            header1 = document.createElement('h2');
+            textNode = document.createTextNode(w);
+            header1.appendChild( textNode );
+            document.body.appendChild(header1);
+
+            // attr 함수를 이용한 태그내부의 속성값 변경
+            $('img:eq(0)').attr('width', '100');
+            $('img:eq(1)').attr('width', '200');
+            $('img:eq(2)').attr('width', '300');
+
+            // $('img').attr('width', function(index){ return (index_1)*100 + "";});
+
+            $('img:eq(2)').attr( { 'width':'200', 'height':'200' } );
+
+            //속성의 제거
+            $('img:eq(0)').removeAttr('width'); //적용되었던 width값이 제거되면서 원본크기로 설정된다.
+        }); */
+        
+
+        /* 문서 객체의 스타일 추출/검사 */
+        $(function(){
+            //두번째ㅐ h1태그의 배경색 추출
+            var color = $('h1:eq(1)').css('background-color');
+
+            var header1 = document.createElement('h1');
+            var textNode = document.createTextNode(color);
+            header1.appendChild( textNode );
+            document.body.appendChild(header1);
+        });
+
+    </script>
+</head>
+<body>
+    <!-- 문서 객체의 스타일 검사/추출/추가-->
+        <h1 class="item_1">Header-0</h1>
+        <h1 class="item_2">Header-1</h1>
+        <h1 class="item_3">Header-2</h1>
+        <h2>Header-0</h2>
+        <h2>Header-1</h2>
+        <h2>Header-2</h2>
+
+
+    <!-- 문서 객체의 속성 검사/추가 -->
+
+    <!-- <h1 class="item_1">Koala.jpg</h1>
+    <img src="images/Koala.jpg" width="150"/>
+    <h1 class="item_2">Penguins.jpg</h1>
+    <img src="images/Penguins.jpg" width="150"/>
+    <h1 class="item_3">Tulips.jpg</h1>
+    <img src="images/Tulips.jpg" width="150"/> -->
+
+
+    <!-- 1. 문서 객체의 클래스 속성 추가 -->
+    <!-- <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1> -->
+    
+</body>
+</html>
