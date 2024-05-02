@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_CardContent</title>
+    <style type="text/css">
+        section{width: 100%; display: flex; justify-content: space-between;}
+        .media{ display: flex; background: #eeeeee; width:600px; padding: 10px; border: 1px dotted black; margin: 10px;}
+        .media img{ width: 100px; flex: 1; margin-right: 19px;}
+        .media .media-body{ flex: 3;}
+
+        /* 768~1024 media 세로로 */
+        @media (min-width: 768px) and (max-width: 1024px) {
+        section {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 768px) {
+        section {
+          flex-direction: column;
+        }
+        .media {
+          flex-direction: column;
+        }
+      }
+
+        /* ~768 이미지와 media-body가 세로로 */
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="media">
+            <img src="images/photo-01.png" />
+            <div class="media-body">
+                <h3>Feel the nature experience</h3>
+                <p>
+                    중앙선거관리위원회는 법령의 범위안에서 선거관리·국민투표관리 또는 정당사무에 관한 규칙을 제정할 수 있으며, 법률에 저촉되지 아니하는 범위안에서 내부규율에 관한 규칙을 제정할 수 있다.
+                </p>
+            </div>
+        </div>
+
+        <div class="media">
+            <img src="images/photo-02.png" />
+            <div class="media-body">
+                <h3>Feel the nature experience</h3>
+                <p>
+                    중앙선거관리위원회는 법령의 범위안에서 선거관리·국민투표관리 또는 정당사무에 관한 규칙을 제정할 수 있으며, 법률에 저촉되지 아니하는 범위안에서 내부규율에 관한 규칙을 제정할 수 있다.
+                </p>
+            </div>
+        </div>
+
+        <div class="media">
+            <img src="images/photo-03.png" />
+            <div class="media-body">
+                <h3>Feel the nature experience</h3>
+                <p>
+                    중앙선거관리위원회는 법령의 범위안에서 선거관리·국민투표관리 또는 정당사무에 관한 규칙을 제정할 수 있으며, 법률에 저촉되지 아니하는 범위안에서 내부규율에 관한 규칙을 제정할 수 있다.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
