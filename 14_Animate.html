@@ -3,37 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>14_Animate</title>
+    <title>14_Animate.html</title>
     <style type="text/css">
-        div{width: 50px; height: 50px; margin: 3px; background-color: orange; position: relative;}
+        div {width: 50px; height:50px; margin:3px; background-color: orange; position: relative;}
     </style>
     <script src="script/jquery-3.7.1.min.js"></script>
-    <script type="text/javaScript">
+    <script type="text/javascript">
         $(function(){
-            /* $('div').mouseover(function(){
-                $(this).animate( {left:500}, 1000);
-            });
-            $('div').mouseover(function(){
-                $(this).animate({left:0},1000);
-            }); */  //mouseover/out으로 만들기
+            // $('div').mouseover(function(){
+            //     $(this).animate( {left:500}, 1000 );
+            // });
+            // $('div').mouseout(function(){
+            //     $(this).animate({ left:0 }, 1000);
+            // });
+            $('div').hover(   // mouseover 와 mouseout 동시 이벤트
+                function(){ $(this).animate( {left:500} , 1000); } ,   
+                function(){ $(this).animate( {left:0}, 1000 ); }
+            ); 
 
-            $('div').hover( //mouseover 과 mouseout 동시발생
-                function(){$(this).animate({left:500}, 1000);} ,
-                function(){$(this).animate({left:0},1000);}
-            );
-
-            //$(this).css('left','500px'); 
-            //-자체적인 transition-duration이 없다. animate를 사용하는 이유
-            // 지연시간이 없음
+            //$(this).css('left', '500px');   - 자체적 transition-duration 이 없습니다
         });
     </script>
 </head>
 <body>
-    <div>I</div>
-    <div>am</div>
-    <div>a</div>
-    <div>b</div>
-    <div>c</div>
-    <div>d</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
 </body>
 </html>
